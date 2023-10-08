@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Means Clustering Web App</title>
+</head>
+<body>
+    <h1>K-Means Clustering Web App</h1>
+    
+    <form action="/predict" method="POST">
+        <label for="annual_income">Enter Annual Income:</label>
+        <input type="number" name="annual_income" required><br><br>
+        
+        <label for="spending_score">Enter Spending Score:</label>
+        <input type="number" name="spending_score" required><br><br>
+        
+        <input type="submit" value="Predict Cluster">
+    </form>
+
+    {% if prediction %}
+    <h2>Predicted Cluster:</h2>
+    <p>{{ prediction }}</p>
+    {% endif %}
+
+    {% if error %}
+    <h2>Error:</h2>
+    <p>{{ error }}</p>
+    {% endif %}
+</body>
+</html>
