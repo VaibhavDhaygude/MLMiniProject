@@ -14,6 +14,7 @@
         }
 
         h1, h2 {
+            text-align: center;
             color: #0066cc;
         }
 
@@ -55,14 +56,14 @@
     </style>
 </head>
 <body>
-    <h1>K-Means Clustering Web App</h1>
+    <h1>Mall Customer Segmentation</h1>
     
     <form action="/predict" method="POST">
         <label for="annual_income">Enter Annual Income:</label>
-        <input type="number" name="annual_income" required><br><br>
+        <input type="number" name="annual_income" placeholder="Enter Income in $K" required><br><br>
         
         <label for="spending_score">Enter Spending Score:</label>
-        <input type="number" name="spending_score" required><br><br>
+        <input type="number" name="spending_score" placeholder="Enter Spending score (1-100)" required><br><br>
         
         <input type="submit" value="Predict Cluster">
     </form>
